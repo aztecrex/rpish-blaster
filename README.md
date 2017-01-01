@@ -1,15 +1,12 @@
-# RaspberyPi Sense Hat Experiments
+# Raspbery Pi Blaster
 
-## reset_matrix.py
+For [Sense Hat](https://www.raspberrypi.org/products/sense-hat/)
 
-Clear and re-orient the matrix display.
+## Run it
 
-## gravity_ball.py
+python blaster.py
 
-Roll the ball on the field by tilting the RPi. So much fun. The joystick gradually changes the color.
+## Use it
 
-## pixel_control.py
-
-Based on the example from the RPi SenseHat site. Move the pixel with
-the joystick. With some added lines coming in from the corners. Woo hoo.
+Joystick moves the targetting marker. Middle button fires.
 
