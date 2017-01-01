@@ -4,7 +4,7 @@ For [Sense Hat](https://www.raspberrypi.org/products/sense-hat/)
 
 ## Run it
 
-python blaster.py
+python quad-blaster.py
 
 ## Use it
 
