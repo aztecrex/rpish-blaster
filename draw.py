@@ -5,8 +5,8 @@ sense = SenseHat()
 
 
 def plot(x, y, r, g, b):
-    sense.set_pixel(x, y, r, g, b)
-    # print('x={:d}, y={:d}, r={:d}, g={:d}, b={:d}'.format(x, y, r, g, b))
+    if (x >= 0 && x < 8 && y >= 0 && y < 8):
+        sense.set_pixel(x, y, r, g, b)
 
 class Sprite:
 
@@ -27,6 +27,9 @@ class Sprite:
                 plot(px, py, 0, 0, 0)
         self.oldpoints = points;
 
+crosshair = Sprite([(-1,0),(1,0),(0,-1),(0,1)], 0, 0, 255)
+bullet = Sprite([0,0], 255, 0, 0))
+
 def main():
     sense.clear()
     cross = Sprite([(-1,0),(1,0),(0,-1),(0,1)])
@@ -35,6 +38,4 @@ def main():
     cross.put(1,3)
 
 if __name__ == "__main__": main()
-
-
 
