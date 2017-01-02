@@ -1,10 +1,12 @@
 from sense_hat import SenseHat
+from time import sleep
 
 sense = SenseHat()
 
 
 def plot(x, y, r, g, b):
-    print('x={:d}, y={:d}, r={:d}, g={:d}, b={:d}'.format(x, y, r, g, b))
+    sense.set_pixel(x, y, r, g, b)
+    # print('x={:d}, y={:d}, r={:d}, g={:d}, b={:d}'.format(x, y, r, g, b))
 
 class Sprite:
 
@@ -26,6 +28,8 @@ class Sprite:
         self.oldpoints = points;
 
 
-cross = Sprite([(-1,-1),(-1,1),(1,-1),(1,1)])
+sense.clear()
+cross = Sprite([(-1,0),(1,0),(0,-1),(0,1)])
 cross.put(3,3)
+sleep(.5)
 cross.put(1,3)
