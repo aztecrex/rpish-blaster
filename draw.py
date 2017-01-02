@@ -27,9 +27,14 @@ class Sprite:
                 plot(px, py, 0, 0, 0)
         self.oldpoints = points;
 
+def main():
+    sense.clear()
+    cross = Sprite([(-1,0),(1,0),(0,-1),(0,1)])
+    cross.put(3,3)
+    sleep(.5)
+    cross.put(1,3)
 
-sense.clear()
-cross = Sprite([(-1,0),(1,0),(0,-1),(0,1)])
-cross.put(3,3)
-sleep(.5)
-cross.put(1,3)
+if __name__ == "__main__": main()
+
+
+
