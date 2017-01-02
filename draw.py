@@ -16,7 +16,8 @@ class Sprite:
         self.g = g;
         self.b = b;
 
-    def put(self, x, y):
+    def put(self, p):
+        x, y = p
         points = {(x + ox, y + oy) for (ox, oy) in self.offsets}
         for px, py in points:
             plot(px, py, self.r, self.g, self.b)
@@ -32,15 +33,12 @@ class Sprite:
             for px, py in self.oldpoints:
                 plot(px, py, 0, 0, 0)
 
-crosshair = Sprite([(-1,0),(1,0),(0,-1),(0,1)], 0, 0, 255)
-bullet = Sprite([(0,0)], 255, 0, 0)
-
 def main():
     sense.clear()
     cross = Sprite([(-1,0),(1,0),(0,-1),(0,1)])
-    cross.put(3,3)
+    cross.put((3,3))
     sleep(.5)
-    cross.put(1,3)
+    cross.put((1,3))
     sleep(.5)
     cross.erase()
 
